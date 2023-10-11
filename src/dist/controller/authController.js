@@ -76,7 +76,7 @@ const signIn = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             if (check) {
                 return res.status(201).json({
                     message: `welcome back ${user === null || user === void 0 ? void 0 : user.userName}`,
-                    data: user
+                    data: user === null || user === void 0 ? void 0 : user._id
                 });
             }
             else {

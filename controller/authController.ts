@@ -74,7 +74,7 @@ export const signIn = async(req : Request, res : Response): Promise<Response> =>
             if (check) {
                 return res.status(201).json({
                     message : `welcome back ${user?.userName}`,
-                    data : user
+                    data : user?._id
                 })
             } else {
                 return res.status(404).json({
