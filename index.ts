@@ -9,7 +9,7 @@ const port : number = parseInt(process.env.PORT!)
 
 mainApp(app)
 
-const server = app.listen(port, ()=>{
+const server = app.listen(process.env.PORT || port, ()=>{
 db()
 })
 

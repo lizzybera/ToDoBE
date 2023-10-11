@@ -11,7 +11,7 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = parseInt(process.env.PORT);
 (0, mainApp_1.mainApp)(app);
-const server = app.listen(port, () => {
+const server = app.listen(process.env.PORT || port, () => {
     (0, db_1.default)();
 });
 process.on("uncaughtException", (err) => {
